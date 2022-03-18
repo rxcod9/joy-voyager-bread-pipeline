@@ -1,6 +1,6 @@
 <?php
 
-namespace Joy\VoyagerBreadReplaceKeyword\Database\Seeders;
+namespace Joy\VoyagerBreadPipeline\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use TCG\Voyager\Facades\Voyager;
@@ -14,13 +14,13 @@ class DataRowsTableSeeder extends Seeder
      */
     public function run()
     {
-        $replaceKeywordDataType = DataType::where('slug', 'replace-keywords')->firstOrFail();
+        $pipelineDataType = DataType::where('slug', 'pipelines')->firstOrFail();
 
-        $dataRow = $this->dataRow($replaceKeywordDataType, 'id');
+        $dataRow = $this->dataRow($pipelineDataType, 'id');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'number',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.id'),
+                'display_name' => __('joy-voyager-bread-pipeline::seeders.data_rows.id'),
                 'required'     => 1,
                 'browse'       => 0,
                 'read'         => 0,
@@ -31,11 +31,11 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($replaceKeywordDataType, 'name');
+        $dataRow = $this->dataRow($pipelineDataType, 'name');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'text',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.name'),
+                'display_name' => __('joy-voyager-bread-pipeline::seeders.data_rows.name'),
                 'required'     => 1,
                 'browse'       => 1,
                 'read'         => 1,
@@ -46,11 +46,11 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($replaceKeywordDataType, 'description');
+        $dataRow = $this->dataRow($pipelineDataType, 'description');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'text',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.description'),
+                'display_name' => __('joy-voyager-bread-pipeline::seeders.data_rows.description'),
                 'required'     => 1,
                 'browse'       => 1,
                 'read'         => 1,
@@ -61,11 +61,11 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($replaceKeywordDataType, 'created_at');
+        $dataRow = $this->dataRow($pipelineDataType, 'created_at');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'timestamp',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.created_at'),
+                'display_name' => __('joy-voyager-bread-pipeline::seeders.data_rows.created_at'),
                 'required'     => 0,
                 'browse'       => 1,
                 'read'         => 1,
@@ -76,11 +76,11 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($replaceKeywordDataType, 'updated_at');
+        $dataRow = $this->dataRow($pipelineDataType, 'updated_at');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'timestamp',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.updated_at'),
+                'display_name' => __('joy-voyager-bread-pipeline::seeders.data_rows.updated_at'),
                 'required'     => 0,
                 'browse'       => 0,
                 'read'         => 0,
@@ -91,11 +91,11 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($replaceKeywordDataType, 'image');
+        $dataRow = $this->dataRow($pipelineDataType, 'image');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'image',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.image'),
+                'display_name' => __('joy-voyager-bread-pipeline::seeders.data_rows.image'),
                 'required'     => 0,
                 'browse'       => 1,
                 'read'         => 1,
@@ -106,11 +106,11 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($replaceKeywordDataType, 'replace_keyword_belongsto_created_by_relationship');
+        $dataRow = $this->dataRow($pipelineDataType, 'pipeline_belongsto_created_by_relationship');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'relationship',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.created_by'),
+                'display_name' => __('joy-voyager-bread-pipeline::seeders.data_rows.created_by'),
                 'required'     => 0,
                 'browse'       => 1,
                 'read'         => 1,
@@ -131,11 +131,11 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($replaceKeywordDataType, 'created_by_id');
+        $dataRow = $this->dataRow($pipelineDataType, 'created_by_id');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'text',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.created_by'),
+                'display_name' => __('joy-voyager-bread-pipeline::seeders.data_rows.created_by'),
                 'required'     => 0,
                 'browse'       => 1,
                 'read'         => 1,
@@ -146,11 +146,11 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($replaceKeywordDataType, 'replace_keyword_belongsto_modified_by_relationship');
+        $dataRow = $this->dataRow($pipelineDataType, 'pipeline_belongsto_modified_by_relationship');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'relationship',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.modified_by'),
+                'display_name' => __('joy-voyager-bread-pipeline::seeders.data_rows.modified_by'),
                 'required'     => 0,
                 'browse'       => 1,
                 'read'         => 1,
@@ -171,11 +171,11 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($replaceKeywordDataType, 'modified_by_id');
+        $dataRow = $this->dataRow($pipelineDataType, 'modified_by_id');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'text',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.modified_by'),
+                'display_name' => __('joy-voyager-bread-pipeline::seeders.data_rows.modified_by'),
                 'required'     => 0,
                 'browse'       => 1,
                 'read'         => 1,
@@ -186,11 +186,11 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($replaceKeywordDataType, 'replace_keyword_belongsto_assigned_to_relationship');
+        $dataRow = $this->dataRow($pipelineDataType, 'pipeline_belongsto_assigned_to_relationship');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'relationship',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.assigned_to'),
+                'display_name' => __('joy-voyager-bread-pipeline::seeders.data_rows.assigned_to'),
                 'required'     => 0,
                 'browse'       => 1,
                 'read'         => 1,
@@ -211,11 +211,11 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($replaceKeywordDataType, 'assigned_to_id');
+        $dataRow = $this->dataRow($pipelineDataType, 'assigned_to_id');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'text',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.assigned_to'),
+                'display_name' => __('joy-voyager-bread-pipeline::seeders.data_rows.assigned_to'),
                 'required'     => 1,
                 'browse'       => 1,
                 'read'         => 1,
@@ -226,11 +226,11 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($replaceKeywordDataType, 'replace_keyword_belongsto_parent_relationship');
+        $dataRow = $this->dataRow($pipelineDataType, 'pipeline_belongsto_parent_relationship');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'relationship',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.parent'),
+                'display_name' => __('joy-voyager-bread-pipeline::seeders.data_rows.parent'),
                 'required'     => 0,
                 'browse'       => 1,
                 'read'         => 1,
@@ -238,24 +238,24 @@ class DataRowsTableSeeder extends Seeder
                 'add'          => 1,
                 'delete'       => 0,
                 'details'      => [
-                    'model'       => 'Joy\\VoyagerBreadReplaceKeyword\\Models\\ReplaceKeyword',
-                    'table'       => 'replace_keywords',
+                    'model'       => 'Joy\\VoyagerBreadPipeline\\Models\\Pipeline',
+                    'table'       => 'pipelines',
                     'type'        => 'belongsTo',
                     'column'      => 'parent_id',
                     'key'         => 'id',
                     'label'       => 'name',
-                    'pivot_table' => 'replace_keywords',
+                    'pivot_table' => 'pipelines',
                     'pivot'       => 0,
                 ],
                 'order'        => 16,
             ])->save();
         }
 
-        $dataRow = $this->dataRow($replaceKeywordDataType, 'parent_id');
+        $dataRow = $this->dataRow($pipelineDataType, 'parent_id');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'text',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.parent'),
+                'display_name' => __('joy-voyager-bread-pipeline::seeders.data_rows.parent'),
                 'required'     => 1,
                 'browse'       => 1,
                 'read'         => 1,

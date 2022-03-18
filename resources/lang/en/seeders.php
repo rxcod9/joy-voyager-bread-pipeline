@@ -13,16 +13,16 @@ return [
         'updated_at'  => 'Updated at',
     ],
     'data_types' => [
-        'replace_keyword' => [
-            'singular' => 'ReplaceKeyword',
-            'plural'   => 'ReplaceKeywords',
+        'pipeline' => [
+            'singular' => 'Pipeline',
+            'plural'   => 'Pipelines',
         ],
     ],
     'menu_items' => [
-        'replace_keywords' => 'ReplaceKeywords',
+        'pipelines' => 'Pipelines',
     ],
     'settings' => [
-        'replace_keyword' => [
+        'pipeline' => [
             'key1'  => 'value1',
             'image' => 'Image',
         ],
