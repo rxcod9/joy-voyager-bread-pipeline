@@ -18,7 +18,7 @@ class DataTypesTableSeeder extends Seeder
                 'name'                  => 'pipelines',
                 'display_name_singular' => __('joy-voyager-bread-pipeline::seeders.data_types.pipeline.singular'),
                 'display_name_plural'   => __('joy-voyager-bread-pipeline::seeders.data_types.pipeline.plural'),
-                'icon'                  => 'voyager-bread',
+                'icon'                  => 'voyager-bread voyager-bread-pipeline voyager-flashlight',
                 'model_name'            => 'Joy\\VoyagerBreadPipeline\\Models\\Pipeline',
                 // 'policy_name'           => 'Joy\\VoyagerBreadPipeline\\Policies\\PipelinePolicy',
                 // 'controller'            => 'Joy\\VoyagerBreadPipeline\\Http\\Controllers\\VoyagerBreadPipelineController',
